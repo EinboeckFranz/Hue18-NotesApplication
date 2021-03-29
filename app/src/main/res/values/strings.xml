@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NoteApplication</string>
+    <string name="contextMenuEdit_text">Edit</string>
+    <string name="contextMenuDetails_text">Details</string>
+    <string name="contextMenuDelete_text">Delete</string>
+    <string name="underscore">_</string>
+    <string name="new_note">New</string>
+    <string name="save_file">Save</string>
 </resources>

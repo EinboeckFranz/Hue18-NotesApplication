@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/contextMenu_Edit"
+        android:title="@string/contextMenuEdit_text"/>
+
+    <item
+        android:id="@+id/contextMenu_Details"
+        android:title="@string/contextMenuDetails_text"/>
+
+    <item
+        android:id="@+id/contextMenu_Delete"
+        android:title="@string/contextMenuDelete_text"/>
+</menu>
