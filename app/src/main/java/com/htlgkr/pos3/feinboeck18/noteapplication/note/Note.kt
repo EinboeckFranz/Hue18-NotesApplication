@@ -27,6 +27,6 @@ data class Note(var noteContent: String, var dateTime: LocalDateTime) {
     }
 
     override fun toString(): String {
-        return "${dateTimeFormatter.format(dateTime)}, $noteContent"
+        return "${dateTimeFormatter.format(dateTime.plusHours(2))}, $noteContent"
     }
 }
