@@ -22,7 +22,7 @@ import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
     private var list: ArrayList<Note> = ArrayList()
-    private var file = File("savedNotes.txt")
+    private var file = File("savedNotes.csv")
     private lateinit var listAdapter: NoteAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 .setNegativeButton("Cancel", null)
                 .show()
-        registerForContextMenu(noteListItem)
+        saveNotes()
     }
 
     private fun editItem(position: Int) {
@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
                     currentNote.noteContent = newNoteText.text.toString()
                     currentNote.dateTime = LocalDateTime.now()
                     listAdapter.notifyDataSetChanged()
+                    saveNotes()
                 }
                 .setNegativeButton("Cancel", null)
                 .show()
@@ -137,6 +138,7 @@ class MainActivity : AppCompatActivity() {
     private fun deleteItem(position: Int) {
         list.removeAt(position)
         listAdapter.notifyDataSetChanged()
+        saveNotes()
     }
 
     private fun setupAlertLayout(currentNoteContent: String): LinearLayout {
